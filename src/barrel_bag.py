@@ -1,6 +1,11 @@
 import random
 
 
+class EmptyBagException(Exception):
+    def __str__(self):
+        return 'Мешок с бочонками пуст'
+
+
 class BarrelBag:
     def __init__(self):
         """Создает мешок с бочонками от 1 до 90"""
@@ -12,7 +17,7 @@ class BarrelBag:
         if self.barrels:
             return self.barrels.pop()
         else:
-            raise ValueError("Мешок пуст, все бочонки уже вытянуты.")
+            raise EmptyBagException
 
     def remaining_count(self) -> int:
         """Возвращает количество оставшихся бочонков"""

@@ -1,5 +1,5 @@
 import pytest
-from src.barrel_bag import BarrelBag
+from src.barrel_bag import BarrelBag, EmptyBagException
 
 
 def test_barrel_bag_init():
@@ -26,7 +26,7 @@ def test_empty_bag():
     assert len(drawn_numbers) == 90  # Все 90 бочонков уникальны
 
     # Проверяем, что при попытке взять 91-й бочонок выбрасывается ValueError
-    with pytest.raises(ValueError):
+    with pytest.raises(EmptyBagException):
         bag.draw_barrel()
 
 
