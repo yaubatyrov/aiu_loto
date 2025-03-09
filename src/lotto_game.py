@@ -55,52 +55,6 @@ class LottoGame:
         print("Игра окончена.")
 
 
-# def play_lotto():
-#
-#     # Инициализирует игру с двумя игроками: пользователем и компьютером
-#     user_card = LottoCard()
-#     computer_card = LottoCard()
-#     bag = BarrelBag()
-#
-#     while bag.remaining_count() > 0:
-#
-#         # Проводит раунд игры
-#         barrel = bag.draw_barrel()
-#
-#         print(f"\nНовый бочонок: {barrel} (осталось {bag.remaining_count()})")
-#         print("Карточка игрока:")
-#         print(user_card)
-#         print("\nКарточка компьютера:")
-#         print(computer_card)
-#
-#         # Действие пользователя
-#         action = input("Зачеркнуть число? (y/n): ").strip().lower()
-#         user_has_number = user_card.mark_number(barrel)
-#
-#         if action == "y" and not user_has_number:
-#             print("Вы ошиблись! Вы проиграли.")
-#             break
-#         elif action == "n" and user_has_number:
-#             print("Число было в карточке! Вы проиграли.")
-#             break
-#
-#         # Действие компьютера (он автоматически зачеркивает)
-#         computer_card.mark_number(barrel)
-#
-#         # Проверка победителя
-#         if user_card.is_complete():
-#             print("Поздравляем! Вы выиграли!")
-#             break
-#         elif computer_card.is_complete():
-#             print("Компьютер выиграл! Вы проиграли.")
-#             break
-#     else:
-#         print("Мешок пуст. Игра окончена!")
-
-
 if __name__ == "__main__":
     game = LottoGame()
     game.start()
-
-    # Другой вариант игры
-    # play_lotto()

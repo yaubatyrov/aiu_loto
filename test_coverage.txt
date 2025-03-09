@@ -1,0 +1,10 @@
+----------- coverage: platform win32, python 3.8.8-final-0 -----------
+Name                Stmts   Miss  Cover
+---------------------------------------
+src\__init__.py         0      0   100%
+src\barrel_bag.py      19      5    74%
+src\lotto_card.py      30      2    93%
+src\lotto_game.py      42      5    88%
+---------------------------------------
+TOTAL                  91     12    87%
+
